@@ -45,7 +45,7 @@ Edite o arquivo claude_desktop_config.json e adicione:
 {
   "mcpServers": {
     "mcp-server-api-livros": {
-      "command": "C:\\Users\\rivaldo.junior\\Desktop\\korus-mcp\\McpServer\\bin\\Debug\\net9.0\\McpServer.exe",
+      "command": "D:\\github\\mcp-server-dotnet\\src\\Mcp.Server\\bin\\Debug\\net9.0\\Mcp.Server.exe",
       "args": [],
       "type": "stdio"
     }
