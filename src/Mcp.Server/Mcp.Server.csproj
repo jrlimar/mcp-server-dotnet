@@ -16,4 +16,8 @@
     <PackageReference Include="ModelContextProtocol" Version="0.3.0-preview.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Mcp.Core\Mcp.Core.csproj" />
+  </ItemGroup>
+
 </Project>
