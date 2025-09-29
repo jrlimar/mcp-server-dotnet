@@ -45,11 +45,18 @@ Edite o arquivo claude_desktop_config.json e adicione:
 ```bash
 {
   "mcpServers": {
-    "mcp-server-api-livros": {
+    "mcp-server-stdio": {
       "command": "D:\\github\\mcp-server-dotnet\\src\\Mcp.Server\\bin\\Debug\\net9.0\\Mcp.Server.exe",
       "args": [],
       "type": "stdio"
     }
+  },
+  "mcp-streamblehttp": {
+    "command": "npx",
+    "args": [
+      "mcp-remote",
+      "http://localhost:5147/sse"
+    ]
   }
 }
 
