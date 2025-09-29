@@ -22,7 +22,6 @@ namespace Mcp.Core.Tools
             }
             catch (Exception ex)
             {
-                //Log
                 return $"Erro ao buscar livros: {ex.Message}";
             }
         }
@@ -57,7 +56,6 @@ namespace Mcp.Core.Tools
             }
             catch (Exception ex)
             {
-                //Log
                 return $"Erro ao buscar livro: {ex.Message}";
             }
         }
@@ -75,7 +73,6 @@ namespace Mcp.Core.Tools
             }
             catch (Exception ex)
             {
-                //Log
                 return $"Erro ao cadastrar o livro: {ex.Message}";
             }
         }
@@ -94,7 +91,6 @@ namespace Mcp.Core.Tools
             }
             catch (Exception ex)
             {
-                //Log
                 return $"Erro ao atualizar o livro: {ex.Message}";
             }
         }
@@ -114,7 +110,6 @@ namespace Mcp.Core.Tools
             }
             catch (Exception ex)
             {
-                //Log
                 return $"Erro ao atualizar o preço do livro: {ex.Message}";
             }
         }
@@ -132,7 +127,6 @@ namespace Mcp.Core.Tools
             }
             catch (Exception ex)
             {
-                //Log
                 return $"Erro ao excluir livro: {ex.Message}";
             }
         }

@@ -6,8 +6,9 @@ Este projeto demonstra como integrar uma **API em .NET 9** com o **MCP (Model Co
 
 ## 🚀 Estrutura do Projeto
 
-- **McpServer** → Projeto console em .NET 9 que implementa o servidor MCP.
-- **API** → Endpoints que expõem as operações também via HTTP, se necessário.
+- **Mcp.Server** → Projeto console em .NET 9 que implementa o servidor MCP Stdio.
+- **Mcp.StreambleHttp** → Projeto Api em .NET 9 que implementa o servidor MCP StreambleHttp.
+- **Mcp.Api** → Endpoints que expõem as operações também via HTTP, se necessário.
 
 O objetivo é permitir que um modelo de linguagem:
 1. Entenda comandos do usuário em linguagem natural.
@@ -24,7 +25,7 @@ O objetivo é permitir que um modelo de linguagem:
 
 ---
 
-## 🔍 Testando o MCP Server
+## 🔍 Testando o MCP Server Stdio
 
 1. Abra o terminal na pasta do projeto **McpServer**.
 2. Rode o servidor usando o inspector oficial:
@@ -71,3 +72,30 @@ O Claude transforma em linguagem natural e responde:
 
 ![inspector](docs/claude-desktop.png)
 
+## 🔍 Testando o MCP Server com StreambleHttp
+
+### 📡 Conexão via SSE (depreciado)
+> A conexão através de **Server-Sent Events (SSE)** ainda funciona, mas está **depreciada** e não é recomendada para novos testes.  
+```http
+GET http://localhost:5147/sse
+```
+⚡ Conexão via StreambleHttp (recomendado)
+
+A forma atual e recomendada de integração é utilizando StreambleHttp, que suporta comunicação bidirecional baseada em JSON-RPC.
+```
+POST http://localhost:5147
+Content-Type: application/json
+
+{
+  "jsonrpc": "2.0",
+  "method": "initialize"
+}
+```
+
+Ambas formas funcionam com inspector
+1. Abra o terminal na pasta do projeto **McpServer**.
+2. Rode o servidor usando o inspector oficial:
+
+```bash
+npx @modelcontextprotocol/inspector dotnet run
+```

@@ -1,0 +1,21 @@
+{
+	"servers": {
+		"dotnet-mcpserver-local": {
+			"type": "stdio",
+			"command": "dotnet",
+			"args": [
+				"run",
+				"--project",
+				"D:\\github\\mcp-server-dotnet\\src\\Mcp.Server\\Mcp.Server.csproj"
+			]
+		},
+		"dotnet-mcpserver-http": {
+			"type": "http",
+			"url": "http://localhost:5147",
+			"headers": {
+				"X-API-KEY": "xxxxxxxx"
+			}
+		}
+	},
+	"inputs": []
+}
